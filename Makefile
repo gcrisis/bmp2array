@@ -16,6 +16,7 @@ ${TARGET}:${OBJ_O}
 	$(CC) $(CFLAGS) $(OBJ_O) -o $@ 
 
 ${DIR_BIN}/%.o : $(DIR_SRC)/%.c
+	mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c  $< -o $@ 
 	
 clean :
